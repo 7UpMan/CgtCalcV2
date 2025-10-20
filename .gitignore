@@ -1,0 +1,20 @@
+# Maven
+/target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# Others
+*.class
