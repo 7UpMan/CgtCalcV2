@@ -1,4 +1,4 @@
-package cgtcalc.json_Tools;
+package cgtcalc.json_tools;
 
 import com.google.gson.Gson;
 import java.io.BufferedWriter;

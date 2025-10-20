@@ -6,7 +6,7 @@ import cgtcalc.html_output.StockDetailTable;
 import cgtcalc.html_output.TaxSummaryTable;
 import cgtcalc.html_output.TransactionSummaryTable;
 import cgtcalc.html_output.WarningsTable;
-import cgtcalc.json_Tools.Configuration;
+import cgtcalc.json_tools.Configuration;
 
 import com.google.gson.Gson;
 import java.util.ArrayList;

@@ -1,5 +1,5 @@
 
-package cgtcalc.json_Tools;
+package cgtcalc.json_tools;
 
 /**
  *
