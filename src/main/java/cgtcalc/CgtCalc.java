@@ -54,7 +54,7 @@ public class CgtCalc {
         cgt.readTransactionFile(transactionsFileName, allTrades, warningTrades);
         
         // Add any mods if they exist
-        if(modsFileName != null && modsFileName.length() != 0) {
+        if(modsFileName != null && !modsFileName.isEmpty()) {
             cgt.readTransactionFile(modsFileName, allTrades, warningTrades);
         }
 
@@ -218,7 +218,7 @@ public class CgtCalc {
 
         // We want to do this in alphabetical order, so get the current list of keys
         ArrayList<String> tradingPositionKeys = new ArrayList<>();
-        boolean addAll = tradingPositionKeys.addAll(tradingPositions.keySet());
+        tradingPositionKeys.addAll(tradingPositions.keySet());
 
         // Now sort the keys
         Collections.sort(tradingPositionKeys, new Comparator<String>() {

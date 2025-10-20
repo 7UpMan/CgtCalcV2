@@ -1,11 +1,8 @@
 package cgtcalc;
 
-import java.io.Reader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.apache.commons.csv.CSVRecord;
 
 /**
@@ -22,17 +19,17 @@ public class Trade {
     private float quantity;
     private float tradeValueIncFees;
 
-    public Trade(CSVRecord record) {
+    public Trade(CSVRecord scvRecord) {
         try {
-            tradeDate = new SimpleDateFormat("dd/MM/yyyy").parse(record.get("Trade date"));
-            settleDate = new SimpleDateFormat("dd/MM/yyyy").parse(record.get("Settle date"));
-            reference = record.get("Reference");
-            description = record.get("Description");
-            unitCost = Tools.parseFloat(record.get("Unit cost (p)"));
-            quantity = Tools.parseFloat(record.get("Quantity"));
-            tradeValueIncFees = Tools.parseFloat(record.get("Value (�)"));
+            tradeDate = new SimpleDateFormat("dd/MM/yyyy").parse(scvRecord.get("Trade date"));
+            settleDate = new SimpleDateFormat("dd/MM/yyyy").parse(scvRecord.get("Settle date"));
+            reference = scvRecord.get("Reference");
+            description = scvRecord.get("Description");
+            unitCost = Tools.parseFloat(scvRecord.get("Unit cost (p)"));
+            quantity = Tools.parseFloat(scvRecord.get("Quantity"));
+            tradeValueIncFees = Tools.parseFloat(scvRecord.get("Value (�)"));
         } catch (ParseException ex) {
-            System.out.println("Could not parse data " + record.toString());
+            System.out.println("Could not parse data " + scvRecord.toString());
         }
     }
 
